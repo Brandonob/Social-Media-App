@@ -3,10 +3,10 @@ const app = express();
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const PORT = 3000;
-const usersRouter = require('./db/routes/users/users')
-const postsRouter = require('./db/routes/posts/posts')
-const likesRouter = require('./db/routes/likes/likes')
-const commentsRouter = require('./db/routes/comments/comments')
+const usersRouter = require('./routes/users/users')
+const postsRouter = require('./routes/posts/posts')
+const likesRouter = require('./routes/likes/likes')
+const commentsRouter = require('./routes/comments/comments')
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
