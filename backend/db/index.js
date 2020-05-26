@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const pgp = require('pg-promise')({});
-const database = pgp('postgress://localhost:5432/facebook_db')
+const database = pgp(process.env.DATABASE_URL)
 module.exports = database;
