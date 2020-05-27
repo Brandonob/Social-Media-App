@@ -3,12 +3,12 @@ import React from 'react'
 
 const loginNavBar = () => {
     return (
-        <div>
-            <h1>facebook</h1>
-            <form>
-                <input type="text" />
-                <input type="text" />
-                <button>login</button>
+        <div className="loginHeader">
+            <form id="loginForm">
+                <h1>facebook</h1>
+                <input className="loginB" type="text" />
+                <input className="loginB" type="text" />
+                <button className="loginB" >login</button>
             </form>  
         </div>
     )
