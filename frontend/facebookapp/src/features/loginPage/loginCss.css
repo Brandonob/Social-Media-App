@@ -46,10 +46,10 @@ table {
 
 .loginHeader {
     border: solid rgb(0, 1, 3) 1px;
-    padding: 35px;
+    padding: 25px;
     position: sticky;
-    background-color: blanchedalmond;
-    /* border-bottom: 90px; */
+    background-color: rgb(58, 92, 165);
+    margin-bottom: 20px;
 }
 
 #loginForm {
@@ -61,5 +61,70 @@ table {
 .loginB {
     position: relative;
     left: 24%;
-    justify-content: space-evenly;
+    margin-right: 11px;
+    border-radius: 0%;
+    /* padding: 5px; */
+}
+
+.title {
+    position: relative;
+    right: 20%;
+    font-size: 35px;
+    font-family: sans-serif;
+}
+
+.signupForm {
+    /* display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column;
+    height: 600px; */
+    /* width: 500px; */
+    /* position: relative;
+    left: 50%; */ 
+    /* justify-content: center; */
+    
+    /* flex-direction: column; */
+}
+
+.signupForm > input {
+    border-radius: 0px;
+    height: 30px;
+    width: 200px;
+}
+
+.signupForm > button {
+    border-radius: 10px;
+    height: 40px;
+    width: 200px;
+}
+
+.signupDiv {
+    text-align: left;
+    position: absolute;
+    left: 55%; 
+    /* font-size: 30px; */
+}
+
+.signupDiv > h2 {
+    font-size: 43px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.signupDiv > h2, p, input, h5{
+    margin-bottom: 10px;
+}
+
+.signupDiv > p {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#A {
+    margin-right: 10px;
+}
+
+#C {
+    display: flex;
+    flex-direction: column;
+
 }

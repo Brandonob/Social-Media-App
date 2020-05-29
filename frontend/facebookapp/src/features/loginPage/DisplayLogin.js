@@ -1,6 +1,6 @@
 import React from 'react'
 import SignUpForm from './SignUpForm'
-import loginCss from './loginCss.css'
+import './loginCss.css'
 
 const DisplayLogin = () => {
     return (
