@@ -7,11 +7,13 @@ import { login } from '../../util/firebaseFunctions'
 const LoginNavBar = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [errMessage, setErrMessage] = useState("")
     const history = useHistory();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            await login(email, password)
             history.push("/")
         } catch (error) {
             
@@ -21,10 +23,10 @@ const LoginNavBar = () => {
 
     return (
         <div className="loginHeader">
-            <form id="loginForm" onSubmit={handleSubmit()}>
+            <form id="loginForm" onSubmit={handleSubmit}>
                 <h1 className="title" >facebook</h1>
-                <input placeholder="Email or Phone" className="loginB" type="text" onChange={(e)=> setEmail(e.target.value)} />
-                <input placeholder="Password" className="loginB" type="text" onChange={(e)=> setPassword(e.target.value)} />
+                <input value={email} placeholder="Email or Phone" className="loginB" type="text" onChange={(e)=> setEmail(e.target.value)} />
+                <input value={password} placeholder="Password" className="loginB" type="text" onChange={(e)=> setPassword(e.target.value)} />
                 <button className="loginB" >log In</button>
             </form>  
         </div>

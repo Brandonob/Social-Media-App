@@ -12,13 +12,12 @@ DROP TABLE IF EXISTS comments;
 CREATE TABLE users
 (
     id SERIAL PRIMARY KEY,
-    username VARCHAR,
     password VARCHAR,
     first_name VARCHAR,
     last_name VARCHAR,
     email_address VARCHAR,
-    bio VARCHAR,
-    profile_pic varchar
+    profile_pic varchar,
+    bio VARCHAR
 );
 
 CREATE TABLE posts
