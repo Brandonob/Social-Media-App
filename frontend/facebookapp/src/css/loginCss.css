@@ -73,7 +73,7 @@ table {
     font-family: sans-serif;
 }
 
-.signupForm {
+/* .signupForm { */
     /* display: flex;
     /* flex-wrap: wrap; */
     /* flex-direction: column;
@@ -84,7 +84,7 @@ table {
     /* justify-content: center; */
     
     /* flex-direction: column; */
-}
+/* } */
 
 .signupForm > input {
     border-radius: 0px;

@@ -45,7 +45,7 @@ const SignUpForm = () => {
                 <h5>Gender</h5>
                 <button>Sign Up</button>
             </form>
-
+            {errMessage}
         </div>
     )
 }

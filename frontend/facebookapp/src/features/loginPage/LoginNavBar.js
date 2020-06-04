@@ -16,7 +16,7 @@ const LoginNavBar = () => {
             await login(email, password)
             history.push("/")
         } catch (error) {
-            
+            setErrMessage(error.message)
         }
 
     }
@@ -29,6 +29,7 @@ const LoginNavBar = () => {
                 <input value={password} placeholder="Password" className="loginB" type="text" onChange={(e)=> setPassword(e.target.value)} />
                 <button className="loginB" >log In</button>
             </form>  
+            {errMessage}
         </div>
     )
 }
