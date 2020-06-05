@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom'
+
+import '../../css/homeCss.css'
 import f_logo from '../../logos_images/f_logo.png'
 import f_dropdownimgL from '../../logos_images/f_dropdownimgL.png'
 import f_gamesimgD from '../../logos_images/f_gamesimgD.png'
@@ -31,22 +33,45 @@ const NavBar = () => {
 
     }
     return (
-        <div>
-            <div>
+        <div className="navbar">
+            <div className="left">
                 <img src={f_logo} alt="" />
                 <input type="text" placeholder="Search Facebook"/>
             </div>
 
             <div className="center">
-                <img src={f_logo} alt=""/>
-                {/* <img src={f_logo} alt=""/>
-                <img src={f_logo} alt=""/>
-                <img src={f_logo} alt=""/>
-                <img src={f_logo} alt=""/> */}
+                <section>
+                    <img src={f_homeimgL} alt=""/>
+                </section>
+                <section>
+                    <img src={f_watchimgL} alt=""/>
+                </section>
+                <section>
+                    <img src={f_marketplaceimgL} alt=""/>
+                </section>
+                <section>
+                    <img src={f_groupsimgL} alt=""/>
+                </section>
+                <section>
+                    <img src={f_gamesimgL} alt=""/>
+                </section>
+                
             </div>
 
             <div className="right">
-                <button onClick={changeTheme} placeholder={"Dark Mode"}/>
+                <section>
+                    <img src={f_plusimgL} alt=""/>
+                </section>
+                <section>
+                    <img src={f_messangerimgL} alt=""/>
+                </section>
+                <section>
+                    <img src={f_notificationsimg} alt=""/>
+                </section>
+                <section>
+                    <img src={f_dropdownimgL} alt=""/>
+                </section>
+                {/* <button onClick={changeTheme} >Dark Mode</button> */}
             </div>
         </div>
     )
