@@ -42,3 +42,16 @@ CREATE TABLE comments
     post_id INT REFERENCES posts(id) ON DELETE CASCADE,
     content VARCHAR
 );
+
+INSERT INTO users
+    (password, first_name, last_name, email_address, profile_pic, bio)
+VALUES
+    ('secret', 'Brandon', 'Brown', 'bb@pursuit.org', 'uploads/saltflats.JPG', 'Hi Welcome to my page');
+
+INSERT INTO posts
+    (owner_id, post_image_url, body)
+VALUES
+    ('1', 'backend/images/earthsports2.png', 'Hi, how is everyone doing today?'),
+    ('1', 'backend/images/earthsports2.png', 'was everyones day delightful today?'),
+    ('1', 'backend/images/earthsports2.png', 'Hey there'),
+    ('1', 'backend/images/earthsports2.png', 'Im so bored today');
