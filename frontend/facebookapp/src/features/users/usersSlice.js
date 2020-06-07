@@ -3,13 +3,14 @@ import { createSlice } from '@reduxjs/toolkit'
 export const usersSlice = createSlice({
     name: "users",
     initialState: {
-        currentUser: {},
-        recentUsers: []
+        currentUserId: ""
     },
     reducers: {
         addUser: (state, action) => {
-            state["currentUser"] = action.payload
-            state["recentUsers"].push(action.payload)
+            state["currentUserId"] = action.payload
+        },
+        logOutUser: (state) => {
+            state["currentUserId"] = ""
         }
     }
 })

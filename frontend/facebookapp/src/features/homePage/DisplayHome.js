@@ -1,12 +1,13 @@
 import React from 'react'
+import CreatePostForm from '../universal/CreatePostForm'
 import '../../css/homeCss.css'
 
 const DisplayHome = () => {
     return (
         <div className="home">
-            <section className="leftSide">Hi</section>
-            <section className="middle">Hi</section>
-            <section className="rightSide">Hi</section>
+            <div className="leftSide">Hi</div>
+            <div className="middle">Hi</div>
+            <div className="rightSide">Hi</div>
         </div>
     )
 }

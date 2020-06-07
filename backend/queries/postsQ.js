@@ -7,7 +7,7 @@ const getAllPosts = async (req, res, next) => {
         message: "Got all Posts",
         body: {
           posts: await database.any(
-            "SELECT posts.id, owner_id, post_image_url, body, timestamp, username, full_name, profile_pic_url   FROM posts INNER JOIN users ON posts.owner_id = users.id ORDER BY posts.id DESC"
+            "SELECT posts.id, owner_id, post_image_url, body, timestamp, first_name, last_name, profile_pic   FROM posts INNER JOIN users ON posts.owner_id = users.id ORDER BY posts.id DESC"
           )
         }
       });
@@ -81,24 +81,6 @@ const getAllPosts = async (req, res, next) => {
     }
   };
 
-  const getAllPostsByHashtag = async (req, res, next) => {
-    try {
-      const { search } = req.params
-      console.log(search)
-      res.status(200).json({
-        status: "Success",
-        message: "Got all posts by search: " + search,
-        body: {
-          posts: await database.any(
-            `SELECT posts.owner_id AS post_owner, post_image_url, posts.body AS post_body, TIMESTAMP, hashtags.id AS hashtag_id, hashtags.owner_id AS hashtag_owner, post_id, hashtags.body AS hashtag_body FROM posts INNER JOIN hashtags ON posts.id = hashtags.post_id WHERE hashtags.body LIKE $1`, ['%' + search + '%']
-          )
-        }
-      }) 
-    } catch (error) {
-      next (error)  
-    }
-  }
-
   const deletePost = async (req, res, next) => {
     try {
       let { id } = req.params;
@@ -119,5 +101,10 @@ const getAllPosts = async (req, res, next) => {
   };
 
 module.exports = {
-    
+    getAllPosts,
+    getAllPostsBySingleUser,
+    deletePost,
+    updatePost,
+    createPost,
+    getPost
 }
