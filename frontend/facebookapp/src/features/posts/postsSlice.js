@@ -13,12 +13,14 @@ export const fetchAllPosts = () => async dispatch => {
     try {
         let res = await axios.get("/posts");
         const { posts } = res.data.body;
-        debugger
+        // debugger
         dispatch(recieveAllPosts(posts))
     } catch (error) {
         console.log(error.message);
     }
 }
+
+export const selectPosts = state => state.posts
 
 export const { recieveAllPosts } = postsSlice.actions;
 export default postsSlice.reducer;

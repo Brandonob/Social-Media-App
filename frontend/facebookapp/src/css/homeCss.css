@@ -125,3 +125,35 @@ input{
     border-style: solid;
 }
 
+#option >  img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 20px;
+    top: 28px;
+}
+#option {
+    border-radius: 40px;
+    height: 75px;
+}
+.leftHud {
+    justify-content: center;
+    align-content: center;
+}
+.leftHud > section:hover {
+    background-color: lightgray;
+}
+.middle {
+    background-color:rgb(240,242,245);
+    /* margin-top: 20px; */
+    /* border-radius: 10px; */
+}
+.post {
+    background-color: white;
+    width: 700px;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-left: 80px;
+    height: 100px;
+}

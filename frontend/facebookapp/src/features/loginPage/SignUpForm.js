@@ -40,7 +40,7 @@ const SignUpForm = () => {
                 <input id="A" value={firstName} type="text" placeholder="First name" onChange={(e)=> setFirstName(e.target.value)} />
                 <input id="B" value={lastName} type="text" placeholder="Last name" onChange={(e)=> setLastName(e.target.value)} />
                 <input id="C" value={email} type="text" placeholder="Mobile number or email" onChange={(e)=> setEmail(e.target.value)}/>
-                <input id="D" value={password} type="text" placeholder="New password" onChange={(e)=> setPassword(e.target.value)}/>
+                <input id="D" value={password} type="password" placeholder="New password" onChange={(e)=> setPassword(e.target.value)}/>
                 <h5>Birthday</h5>
                 <h5>Gender</h5>
                 <button>Sign Up</button>
