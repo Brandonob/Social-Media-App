@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'
 import { signUp } from '../../util/firebaseFunctions'
+import { getAPI } from '../../util/util'
 
 
 const SignUpForm = () => {
@@ -9,13 +10,14 @@ const SignUpForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errMessage, setErrMessage] = useState("");
+    const API = getAPI();
 
     const handleSubmit = async (e) => {
         try {
             e.preventDefault();
             // debugger
             let res = await signUp(email, password)
-            await axios.post("/users/addUser", {
+            await axios.post(`${API}/users/addUser`, {
                 id: res.user.uid,
                 password: password,
                 first_name: firstName,

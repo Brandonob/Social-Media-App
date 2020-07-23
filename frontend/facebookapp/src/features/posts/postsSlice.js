@@ -1,5 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
+import { getAPI } from '../../util/util'
+
+const API = getAPI();
 
 export const postsSlice = createSlice({
     name: "posts",
@@ -11,7 +14,7 @@ export const postsSlice = createSlice({
 
 export const fetchAllPosts = () => async dispatch => {
     try {
-        let res = await axios.get("/posts");
+        let res = await axios.get(`${API}/posts`);
         const { posts } = res.data.body;
         // debugger
         dispatch(recieveAllPosts(posts))
