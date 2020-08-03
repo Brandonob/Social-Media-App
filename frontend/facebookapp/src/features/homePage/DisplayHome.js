@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { fetchAllPosts } from '../posts/postsSlice'
-import CreatePostForm from '../universal/CreatePostForm'
+import CreatePost from '../posts/CreatePost'
 import '../../css/homeCss.css'
-import Posts from '../universal/Posts'
+import Posts from '../posts/Posts'
 import LeftContainer from '../homePage/LeftContainer'
 import { logout } from '../../util/firebaseFunctions'
 import { logOutUser } from '../users/usersSlice'
@@ -30,6 +30,7 @@ const DisplayHome = () => {
                 <LeftContainer/>
             </div>
             <div className="middle">
+                <CreatePost/>
                 <Posts/>
             </div>
             <div className="rightSide">
