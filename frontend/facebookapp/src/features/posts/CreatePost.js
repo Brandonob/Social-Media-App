@@ -8,6 +8,14 @@ const CreatePost = ({userName}) => {
         e.preventDefault();
 
     }
+
+    const postForm = () => {
+        return (
+            <div>
+                 <input/>
+            </div>
+        )
+    }
     
     return (
         <div>
